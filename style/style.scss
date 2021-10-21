@@ -11,6 +11,8 @@
 $single-padding: 50px;
 $border-radius: 2rem;
 
+$hover-color: lighten($color: $bright-blue, $amount: 20);
+
 
 * {
   margin: 0;
@@ -29,8 +31,11 @@ body {
   font-family: $font-family;
   font-size: $font-size;
   color: $font-color;
+  background-image: url('/images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
 }
-
 
 h1, h2 {
   color: $dark-blue;
@@ -58,11 +63,6 @@ article.card{
     overflow: hidden;
     border-radius: $border-radius $border-radius 0 0;
 
-    background-image: url('/images/illustration-hero.svg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
     img {
       width: 100%;
       height: 100%;
@@ -72,5 +72,68 @@ article.card{
 
   main {
     padding: $single-padding;
+
+    section.payplan {
+      background-color: $very-pale-blue;
+      border-radius: $font-size / 2;
+      padding: $single-padding / 3;
+      margin-top: 1rem;
+      text-align: left;
+      display: grid;
+      grid-template-rows: 1;
+      grid-template-columns: 1fr 3fr 1fr;
+      align-items: center;
+
+      #costs {
+        display: flex;
+        flex-flow: column wrap;
+        align-self: left;
+
+        h2 {
+          font-size: 1rem;
+        }
+      }
+
+      a:active,
+      a:focus,
+      a:visited {
+        color: $bright-blue;
+      }
+
+      a#change:hover{
+          color: $hover-color;
+          text-decoration: none;
+      }      
+    }
+
+    a#proceed {
+      display: inline-block;
+      width: 100%;
+      margin: 2rem 0;
+      padding: 1rem 0;
+      border: none;
+      background-color: $bright-blue;
+      border-radius: $font-size / 2;
+      box-shadow: 0px 20px 20px $pale-blue;
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      transition: .1s ease-in-out;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+
+    a#cancel {
+      display: inline-block;
+      text-decoration: none;
+      color: $font-color;
+      font-weight: 700;
+
+      &:hover {
+        color: $dark-blue;
+      }
+    }
   }
 }
