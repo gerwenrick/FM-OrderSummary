@@ -14,6 +14,12 @@
           box-sizing: border-box;
 }
 
+@media screen and (min-width: 375px) {
+  body {
+    background-image: url("/images/pattern-background-mobile.svg");
+  }
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -36,7 +42,7 @@ body {
   color: #a6aab5;
   background-image: url("/images/pattern-background-desktop.svg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 150%;
   background-position: center top;
 }
 
@@ -53,6 +59,7 @@ p {
 }
 
 article.card {
+  position: relative;
   display: inline-block;
   border-radius: 2rem;
   text-align: center;
@@ -65,6 +72,8 @@ article.card {
           flex-flow: column wrap;
   background-color: white;
   max-width: 450px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 article.card figure.header-img {
