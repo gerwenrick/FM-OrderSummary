@@ -1,0 +1,76 @@
+@import '_style-guide';
+
+.attribution {
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+}
+
+$single-padding: 50px;
+$border-radius: 2rem;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $pale-blue;
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $font-color;
+}
+
+
+h1, h2 {
+  color: $dark-blue;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+article.card{
+  display: inline-block;
+  border-radius: $border-radius;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: white;
+  max-width: 450px;
+
+  figure.header-img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: $border-radius $border-radius 0 0;
+
+    background-image: url('/images/illustration-hero.svg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+  }
+
+  main {
+    padding: $single-padding;
+  }
+}
